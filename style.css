@@ -155,10 +155,6 @@ li > * {
 }
 
 /* Edit Task */
-/* ul li input[type=text] {
-  display:none
-} */
-
 li.edit-mode .main-text-input {
   display: inline-block;
   width: 224px;

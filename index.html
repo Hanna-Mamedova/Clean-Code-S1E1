@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
-  <body>
+  <body class="body">
     <div class="image__container">
       <img class="image" src="./eisenhower-matrix.jpg" alt="eisenhower matrix">
       <a class="more-info__link" href="https://goal-life.com/page/method/matrix-eisenhower">
@@ -13,15 +13,15 @@
     </div>
     <main class="main__container">
       <section>
-        <h3 class="new-task_title">Add Item</h3>
+        <h3 class="new-task_title title">Add Item</h3>
         <div class="new-task_input__container">
           <input id="new-task" class="task-line task-line__input" type="text">
           <button class="button">Add</button>
         </div>
       </section>
-      <h3>Todo</h3>
-      <ul class="incomplete-tasks" id="incomplete-tasks">
-        <li>
+      <h3 class="title">Todo</h3>
+      <ul class="tasks incomplete-tasks" id="incomplete-tasks">
+        <li class="task">
           <input class="checkbox" type="checkbox">
           <label class="task-line task-line__label">Pay Bills</label>
           <input type="text" class="main-text-input task-line task-line__input">
@@ -30,7 +30,7 @@
             <img class="delete-button_image" src="./remove.svg" alt="remove icon">
           </button>
         </li>
-        <li class="edit-mode">
+        <li class="task edit-mode">
           <input class="checkbox" type="checkbox">
           <label class="task-line task-line__label">Go Shopping</label>
           <input type="text" value="New task" class="main-text-input task-line task-line__input">
@@ -40,9 +40,9 @@
           </button>
         </li>
       </ul>
-      <h3>Completed</h3>
-      <ul class="completed-tasks" id="completed-tasks">
-        <li>
+      <h3 class="title">Completed</h3>
+      <ul class="tasks completed-tasks" id="completed-tasks">
+        <li class="task">
           <input class="checkbox" type="checkbox" checked>
           <label class="task-line task-line__label">See the Doctor</label>
           <input type="text" class="main-text-input task-line task-line__input">

@@ -33,20 +33,22 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task-line task-line__label';
+    label.className='task__label';
 
     //Each elements, needs appending
+    listItem.classList="tasks__item task";
+
     checkBox.type="checkbox";
-    checkBox.className="checkbox";
+    checkBox.className="task__checkbox";
     editInput.type="text";
-    editInput.className="main-text-input task-line task-line__input";
+    editInput.className="input task__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit-save-button button";
+    editButton.className="button button--edit";
 
-    deleteButton.className="delete-button button";
+    deleteButton.className="button button--delete";
     deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.className='delete-button_image';
+    deleteButtonImg.className='task__button-image';
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -86,7 +88,7 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit-save-button");
+    var editBtn=listItem.querySelector(".button--edit");
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
@@ -158,8 +160,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit-save-button");
-    var deleteButton=taskListItem.querySelector("button.delete-button");
+    var editButton=taskListItem.querySelector("button.button--edit");
+    var deleteButton=taskListItem.querySelector("button.button--delete");
 
 
     //Bind editTask to edit button.
